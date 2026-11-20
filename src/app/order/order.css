@@ -1,0 +1,126 @@
+:host {
+  display: block;
+  padding-top: 28px;
+}
+
+.done {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+h1 {
+  max-width: 18ch;
+  font-size: clamp(34px, 5.4vw, 68px);
+  font-stretch: 120%;
+  line-height: 0.98;
+}
+
+.lead {
+  max-width: 58ch;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.lead strong {
+  color: var(--ink);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 20px;
+  width: 100%;
+  margin: 16px 0 12px;
+}
+
+.box {
+  padding: 24px;
+  border-radius: 10px;
+  background: var(--fog);
+}
+
+.box h2 {
+  margin-bottom: 14px;
+  font-size: 18px;
+  font-stretch: 110%;
+  letter-spacing: -0.01em;
+}
+
+.box h2.second {
+  margin-top: 22px;
+}
+
+.box ul {
+  display: grid;
+  gap: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.box li {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+}
+
+.thumb {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.thumb.photo {
+  padding: 0;
+  overflow: hidden;
+  background: var(--fog);
+}
+
+.what {
+  display: flex;
+  flex-direction: column;
+}
+
+.what small {
+  color: var(--muted);
+}
+
+.amt {
+  font-weight: 700;
+}
+
+dl div {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+dt {
+  color: var(--muted);
+}
+
+.total {
+  margin-top: 6px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.total dt {
+  color: var(--ink);
+}
+
+.addr {
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

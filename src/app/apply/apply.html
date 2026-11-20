@@ -1,0 +1,36 @@
+<article>
+  @if (housingLocation) {
+    <img class="listing-photo" [src]="housingLocation.photo" alt="Exterior photo of {{housingLocation.name}}">
+
+    <section class="listing-apply">
+      <h2 class="listing-heading">{{housingLocation.name}}</h2>
+      <h3 class="section-heading">Apply now to live here</h3>
+
+      @if (submitted) {
+        <p class="success-message">✅ Application submitted successfully!</p>
+      }
+
+      <form [formGroup]="applyForm" (submit)="submitApplication()">
+        <label for="first-name">First Name</label>
+        <input id="first-name" type="text" formControlName="firstName">
+        @if (applyForm.controls.firstName.invalid && applyForm.controls.firstName.touched) {
+          <span class="error-message">First name is required (min 2 characters).</span>
+        }
+
+        <label for="last-name">Last Name</label>
+        <input id="last-name" type="text" formControlName="lastName">
+        @if (applyForm.controls.lastName.invalid && applyForm.controls.lastName.touched) {
+          <span class="error-message">Last name is required (min 2 characters).</span>
+        }
+
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email">
+        @if (applyForm.controls.email.invalid && applyForm.controls.email.touched) {
+          <span class="error-message">Please enter a valid email address.</span>
+        }
+
+        <button type="submit" class="primary">Apply now</button>
+      </form>
+    </section>
+  }
+</article>

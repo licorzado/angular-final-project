@@ -1,0 +1,129 @@
+.error-message { color: #d32f2f; font-size: 12px; margin-top: 2px; }
+.success-message { color: #2e7d32; background-color: #e8f5e9; padding: 10px 14px; border-radius: 6px; font-size: 14px; margin-bottom: 12px; }
+.apply-link { display: inline-block; margin-top: 16px; color: #6c63ff; font-weight: 600; text-decoration: none; }
+
+article {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  padding: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.listing-photo {
+  order: 2;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.listing-description,
+.listing-features,
+.listing-apply {
+  order: 1;
+  width: 100%;
+}
+
+.listing-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  color: #1a1a1a;
+}
+
+.listing-location {
+  color: #444;
+  margin: 0 0 16px 0;
+}
+
+.listing-location::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236c63ff'><path d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.section-heading {
+  font-size: 15px;
+  font-weight: 700;
+  color: #6c63ff;
+  margin: 16px 0 8px 0;
+  text-transform: none;
+}
+
+.listing-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.listing-features li {
+  margin-bottom: 4px;
+}
+
+.listing-apply form {
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
+}
+
+.listing-apply label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #555;
+  margin-top: 12px;
+}
+
+.listing-apply input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 6px 0;
+  font-size: 14px;
+  outline: none;
+  background: transparent;
+}
+
+.listing-apply input:focus {
+  border-bottom: 1px solid #6c63ff;
+}
+
+.listing-apply button {
+  margin-top: 20px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.listing-apply button:hover {
+  background-color: #574fd6;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.success-message {
+  color: #2e7d32;
+  background-color: #e8f5e9;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
